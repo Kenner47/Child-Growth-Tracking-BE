@@ -31,11 +31,4 @@ All functionalities were implemented using **ASP.NET Core** and **Entity Framewo
 ## 📅 Duration
 
 **Jan 2024 – Mar 2024**  
-**Team size:** 5 members
-
----
-
-## 📄 Note
-
-This repository includes only the code and features I contributed to.  
-It is shared for educational and portfolio purposes only.
+**Team size:** 5 members.
