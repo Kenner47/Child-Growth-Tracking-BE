@@ -1,0 +1,22 @@
+﻿using DataObjects_BE.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repositories_BE.Interfaces
+{
+    public interface IServiceOrderRepository: IGenericRepository<ServiceOrder>
+    {
+        ServiceOrder GetOrderById(Guid id);
+        ServiceOrder GetLastestOrderByParentId(Guid parentId);
+        List<ServiceOrder> GetListOrderByParentId(Guid parentId);
+        Task AddAsync(ServiceOrder serviceOrder);
+        
+        Task<ServiceOrder> CreateServiceOrderAsync(float totalAmount);
+        Task<bool> UpdateServiceOrderStatusAsync(Guid orderId, int status);
+        Task UpdateOrdersAsync(List<ServiceOrder> orders);
+        Task<List<ServiceOrder>> GetExpiredOrdersAsync();
+    }
+}
